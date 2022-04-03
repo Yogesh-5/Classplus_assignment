@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1> Users list -- </h1>
+
+{% if Users %}
+
+<ol>
+
+{% for persons in Users %}
+<li>User Info -- </li>
+<ul>
+
+   <li>Name : {{ persons.username}} </li>
+   <li>Email : {{ persons.email }}</li>
+
+</ul>
+
+{% endfor %}
+
+</ol>
+{% endif %}
+
+{% endblock %}
